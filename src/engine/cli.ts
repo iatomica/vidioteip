@@ -72,9 +72,16 @@ async function main() {
       break;
     }
 
+    case 'clean': {
+      console.log('🧹 [CLI] Running retention & storage cleanup...');
+      const report = engine.cleanup();
+      console.log('\n📊 Cleanup Report:', report);
+      break;
+    }
+
     default: {
       console.log(`Unknown command: ${command}`);
-      console.log('Available commands: scrape, status, produce, run');
+      console.log('Available commands: scrape, status, produce, run, clean');
       process.exit(1);
     }
   }

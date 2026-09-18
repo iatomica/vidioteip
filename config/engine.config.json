@@ -1,0 +1,29 @@
+{
+  "general": {
+    "quota": 5,
+    "autoCleanupOnRun": true
+  },
+  "retention": {
+    "producedDaysToKeep": 30,
+    "pendingMaxAgeDays": 3,
+    "outBatchesDaysToKeep": 15
+  },
+  "video": {
+    "theme": "editorial-calm",
+    "formats": ["vertical", "horizontal"],
+    "sceneDurationSeconds": 4.5,
+    "outroDurationSeconds": 3.5
+  },
+  "audio": {
+    "enabled": false,
+    "src": null,
+    "volume": 0.25
+  },
+  "sources": {
+    "anbariloche": {
+      "enabled": true,
+      "baseUrl": "https://www.anbariloche.com.ar",
+      "pollIntervalMinutes": 30
+    }
+  }
+}

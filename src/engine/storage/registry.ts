@@ -220,4 +220,37 @@ export class RegistryStore {
   public getBatches(): BatchRecord[] {
     return Object.values(this.data.batches);
   }
+
+  /**
+   * Prune produced and stale pending records based on timestamps
+   */
+  public pruneByRetention(options: { producedBeforeMs: number; pendingBeforeMs: number }): {
+    purgedProduced: number;
+    purgedPending: number;
+  } {
+    let purgedProduced = 0;
+    let purgedPending = 0;
+
+    for (const [id, article] of Object.entries(this.data.articles)) {
+      const discoveredMs = new Date(article.discoveredAt).getTime();
+      const producedMs = article.producedAt ? new Date(article.producedAt).getTime() : discoveredMs;
+
+      // 1. Purge old produced articles
+      if (article.status === 'produced' && producedMs < options.producedBeforeMs) {
+        delete this.data.articles[id];
+        purgedProduced++;
+      }
+      // 2. Discard stale pending articles
+      else if (article.status === 'pending' && discoveredMs < options.pendingBeforeMs) {
+        this.data.articles[id].status = 'discarded';
+        purgedPending++;
+      }
+    }
+
+    if (purgedProduced > 0 || purgedPending > 0) {
+      this.save();
+    }
+
+    return { purgedProduced, purgedPending };
+  }
 }

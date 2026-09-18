@@ -2,14 +2,18 @@ import { RegistryStore } from './storage/registry';
 import { ANBarilocheScraper } from './scrapers/anbariloche';
 import { ScraperProvider, BatchRecord, EngineManifest } from './types';
 import { AssetDownloader } from './services/assetDownloader';
-import { BatchManager, BatchPropsOptions } from './services/batchManager';
+import { BatchManager } from './services/batchManager';
 import { VideoRenderer } from './services/videoRenderer';
 import { ManifestBuilder } from './services/manifestBuilder';
+import { RetentionCleaner, CleanupReport } from './services/retentionCleaner';
+import { loadConfig, EngineConfig } from './config';
 
 export * from './types';
+export * from './config';
 export { RegistryStore } from './storage/registry';
 export { BaseScraper } from './scrapers/base';
 export { ANBarilocheScraper } from './scrapers/anbariloche';
+export { RetentionCleaner } from './services/retentionCleaner';
 
 export interface PipelineOptions {
   quota?: number;
@@ -21,20 +25,30 @@ export interface PipelineOptions {
 }
 
 export class NewsVideoEngine {
+  private config: EngineConfig;
   private registry: RegistryStore;
   private scrapers: Map<string, ScraperProvider> = new Map();
   private downloader: AssetDownloader;
   private batchManager: BatchManager;
   private renderer: VideoRenderer;
+  private cleaner: RetentionCleaner;
 
-  constructor(customRegistryPath?: string) {
+  constructor(customRegistryPath?: string, customConfigPath?: string) {
+    this.config = loadConfig(customConfigPath);
     this.registry = new RegistryStore(customRegistryPath);
     this.downloader = new AssetDownloader();
     this.batchManager = new BatchManager();
     this.renderer = new VideoRenderer();
+    this.cleaner = new RetentionCleaner(this.registry);
 
-    // Register default scrapers
-    this.registerScraper(new ANBarilocheScraper());
+    // Register scrapers enabled in config
+    if (this.config.sources.anbariloche?.enabled !== false) {
+      this.registerScraper(new ANBarilocheScraper());
+    }
+  }
+
+  public getConfig(): EngineConfig {
+    return this.config;
   }
 
   /**
@@ -76,6 +90,7 @@ export class NewsVideoEngine {
    */
   public getStatus() {
     return {
+      config: this.config,
       overview: this.registry.getStatusOverview(),
       pendingArticles: this.registry.getPendingArticles(),
       batches: this.registry.getBatches(),
@@ -83,7 +98,14 @@ export class NewsVideoEngine {
   }
 
   /**
-   * 3. Produce a batch of 5 news if quota is met
+   * 3. Run periodic retention cleanup of registry and out/ media files
+   */
+  public cleanup(customConfig?: EngineConfig): CleanupReport {
+    return this.cleaner.clean(customConfig || this.config);
+  }
+
+  /**
+   * 4. Produce a batch of N news if quota is met
    */
   public async produce(options: PipelineOptions = {}): Promise<{
     batch: BatchRecord | null;
@@ -91,7 +113,7 @@ export class NewsVideoEngine {
     status: 'produced' | 'quota_not_met' | 'error';
     message: string;
   }> {
-    const quota = options.quota || 5;
+    const quota = options.quota || this.config.general.quota || 5;
     const portalId = options.portalId || 'anbariloche';
 
     const pending = this.registry.getPendingArticles(portalId);
@@ -127,17 +149,21 @@ export class NewsVideoEngine {
         console.warn(`[Engine] Warning: Some images had errors:`, downloadRes.errors);
       }
 
-      // 3. Assemble dynamic video props
+      // 3. Assemble dynamic video props with config defaults
+      const audioSrc = options.audioSrc || (this.config.audio.enabled ? this.config.audio.src || undefined : undefined);
+      const audioVolume = options.audioVolume ?? this.config.audio.volume ?? 0.25;
+
       const videoProps = this.batchManager.createVideoProps(batch, {
-        audioSrc: options.audioSrc,
-        audioVolume: options.audioVolume,
+        audioSrc,
+        audioVolume,
       });
       const propsFile = this.batchManager.saveBatchProps(batch, videoProps);
 
       // 4. Render videos headless
-      console.log(`\n🎥 [Engine] Rendering video batch headless with Remotion...`);
+      const targetFormats = options.formats || this.config.video.formats || ['vertical', 'horizontal'];
+      console.log(`\n🎥 [Engine] Rendering video batch headless with Remotion (${targetFormats.join(', ')})...`);
       const renderRes = await this.renderer.renderBatch(batch, propsFile, {
-        formats: options.formats || ['vertical', 'horizontal'],
+        formats: targetFormats,
       });
 
       if (!renderRes.success) {
@@ -180,14 +206,21 @@ export class NewsVideoEngine {
   }
 
   /**
-   * 4. Complete pipeline: Scrape -> Check quota -> If quota reached, Produce
+   * 5. Complete pipeline: Auto-clean -> Scrape -> Check quota -> If quota reached, Produce
    */
   public async run(options: PipelineOptions = {}) {
     console.log(`\n🚀 [Engine] Starting autonomous pipeline cycle...`);
-    const scrapeRes = await this.scrape(options.portalId);
 
+    let cleanupReport: CleanupReport | null = null;
+    if (this.config.general.autoCleanupOnRun) {
+      cleanupReport = this.cleanup();
+    }
+
+    const scrapeRes = await this.scrape(options.portalId);
     const produceRes = await this.produce(options);
+
     return {
+      cleanup: cleanupReport,
       scrape: scrapeRes,
       production: produceRes,
     };
