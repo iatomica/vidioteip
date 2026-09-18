@@ -1,7 +1,30 @@
-node_modules
-dist
-.DS_Store
-.env
+# Dependencies
+node_modules/
+package-lock.json
 
-# Ignore the output video from Git but not videos you import into src/.
-out
+# Build outputs
+dist/
+build/
+
+# Environment and secrets
+.env
+.env.*
+*.local
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# Remotion Video Outputs and Delivery Batches
+out/
+out/*
+
+# Generated Batch Media & Cache
+public/images/batches/
+public/assets/images/batches/
+
+# Local Engine Runtime Ledger
+data/registry.json
+data/*.json
+!data/.gitkeep

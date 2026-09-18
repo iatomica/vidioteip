@@ -43,7 +43,7 @@ export class NewsVideoEngine {
 
     // Register scrapers enabled in config
     if (this.config.sources.anbariloche?.enabled !== false) {
-      this.registerScraper(new ANBarilocheScraper());
+      this.registerScraper(new ANBarilocheScraper(this.config.sources.anbariloche?.baseUrl));
     }
   }
 

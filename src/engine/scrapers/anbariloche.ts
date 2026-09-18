@@ -6,6 +6,13 @@ export class ANBarilocheScraper extends BaseScraper {
   displayName = 'ANBariloche';
   private baseUrl = 'https://www.anbariloche.com.ar';
 
+  constructor(customBaseUrl?: string) {
+    super();
+    if (customBaseUrl) {
+      this.baseUrl = customBaseUrl.replace(/\/+$/, '');
+    }
+  }
+
   private headers = {
     'User-Agent':
       'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
