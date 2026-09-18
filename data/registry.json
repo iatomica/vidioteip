@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-09-18T15:07:11.687Z",
+  "lastUpdated": "2026-09-18T16:15:03.062Z",
   "articles": {
     "anbariloche_117541": {
       "portalId": "anbariloche",
@@ -99,8 +99,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117475",
       "titleHash": "c05861bb411291c4",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.394Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.394Z",
+      "batchId": "batch_20260918160926_anbariloche",
+      "producedAt": "2026-09-18T16:11:21.431Z"
     },
     "anbariloche_117472": {
       "portalId": "anbariloche",
@@ -114,8 +116,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117472",
       "titleHash": "03e09feb455dd759",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.394Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.394Z",
+      "batchId": "batch_20260918160926_anbariloche",
+      "producedAt": "2026-09-18T16:11:21.431Z"
     },
     "anbariloche_117523": {
       "portalId": "anbariloche",
@@ -129,8 +133,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117523",
       "titleHash": "9fb5c16809192a0f",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.394Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.394Z",
+      "batchId": "batch_20260918160926_anbariloche",
+      "producedAt": "2026-09-18T16:11:21.431Z"
     },
     "anbariloche_116669": {
       "portalId": "anbariloche",
@@ -144,8 +150,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_116669",
       "titleHash": "db315b7f80d5686e",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.394Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.394Z",
+      "batchId": "batch_20260918160926_anbariloche",
+      "producedAt": "2026-09-18T16:11:21.431Z"
     },
     "anbariloche_117520": {
       "portalId": "anbariloche",
@@ -159,8 +167,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117520",
       "titleHash": "68c23596e7aafd39",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918160926_anbariloche",
+      "producedAt": "2026-09-18T16:11:21.431Z"
     },
     "anbariloche_117511": {
       "portalId": "anbariloche",
@@ -174,8 +184,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117511",
       "titleHash": "ca426e01294867c7",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918161121_anbariloche",
+      "producedAt": "2026-09-18T16:13:12.618Z"
     },
     "anbariloche_117469": {
       "portalId": "anbariloche",
@@ -189,8 +201,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117469",
       "titleHash": "51466b6eb442f129",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918161121_anbariloche",
+      "producedAt": "2026-09-18T16:13:12.618Z"
     },
     "anbariloche_117466": {
       "portalId": "anbariloche",
@@ -204,8 +218,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117466",
       "titleHash": "be6c384ba8bda09b",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918161121_anbariloche",
+      "producedAt": "2026-09-18T16:13:12.618Z"
     },
     "anbariloche_117463": {
       "portalId": "anbariloche",
@@ -219,8 +235,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117463",
       "titleHash": "0bee70716ee7a4dc",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918161121_anbariloche",
+      "producedAt": "2026-09-18T16:13:12.618Z"
     },
     "anbariloche_117460": {
       "portalId": "anbariloche",
@@ -234,8 +252,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117460",
       "titleHash": "6be988c06d7b070e",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918161121_anbariloche",
+      "producedAt": "2026-09-18T16:13:12.618Z"
     },
     "anbariloche_117439": {
       "portalId": "anbariloche",
@@ -249,8 +269,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117439",
       "titleHash": "a19ef7f71718bfdd",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918161312_anbariloche",
+      "producedAt": "2026-09-18T16:15:03.062Z"
     },
     "anbariloche_117457": {
       "portalId": "anbariloche",
@@ -264,8 +286,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117457",
       "titleHash": "983c76b5f3da7cc1",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918161312_anbariloche",
+      "producedAt": "2026-09-18T16:15:03.062Z"
     },
     "anbariloche_117199": {
       "portalId": "anbariloche",
@@ -279,8 +303,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117199",
       "titleHash": "58da1e6fcacedd2b",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918161312_anbariloche",
+      "producedAt": "2026-09-18T16:15:03.062Z"
     },
     "anbariloche_117211": {
       "portalId": "anbariloche",
@@ -294,8 +320,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117211",
       "titleHash": "bc64ca3b1260e4c3",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918161312_anbariloche",
+      "producedAt": "2026-09-18T16:15:03.062Z"
     },
     "anbariloche_117412": {
       "portalId": "anbariloche",
@@ -309,8 +337,10 @@
       "date": "SEPTIEMBRE DE 2026",
       "id": "anbariloche_117412",
       "titleHash": "6872832babce766b",
-      "status": "pending",
-      "discoveredAt": "2026-09-18T15:03:07.395Z"
+      "status": "produced",
+      "discoveredAt": "2026-09-18T15:03:07.395Z",
+      "batchId": "batch_20260918161312_anbariloche",
+      "producedAt": "2026-09-18T16:15:03.062Z"
     },
     "anbariloche_116465": {
       "portalId": "anbariloche",
@@ -911,6 +941,225 @@
       "videoOutputs": {
         "vertical": "C:\\Users\\manua\\OneDrive\\Documents\\Repos\\vidioteip\\out\\batches\\batch_20260918150335_anbariloche\\bariloche-summary-vertical.mp4",
         "horizontal": "C:\\Users\\manua\\OneDrive\\Documents\\Repos\\vidioteip\\out\\batches\\batch_20260918150335_anbariloche\\bariloche-summary-horizontal.mp4"
+      }
+    },
+    "batch_20260918160926_anbariloche": {
+      "id": "batch_20260918160926_anbariloche",
+      "source": "ANBARILOCHE.COM.AR",
+      "createdAt": "2026-09-18T16:09:26.335Z",
+      "articleIds": [
+        "anbariloche_117475",
+        "anbariloche_117472",
+        "anbariloche_117523",
+        "anbariloche_116669",
+        "anbariloche_117520"
+      ],
+      "items": [
+        {
+          "id": "anbariloche_117475",
+          "order": 1,
+          "title": "Escuelas privadas con subsidios: el proyecto que busca que den vacantes gratis en Neuquén",
+          "subtitle": "La iniciativa ingresó a la Legislatura y propone que los colegios que reciben fondos públicos reserven un porcentaje de sus vacantes para estudiantes de sectores vulnerables.",
+          "category": "EDUCACIÓN",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/18/117475-escuelas-privadas-con-subsidios-el-proyecto-que-busca-que-den-vacantes-gratis-en-neuquen",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/54/2775478_f8c49aa8f61025f2ba78f9ee5c0f94b7115acf0e62e6e62aab5e6dcd475d1a32/lg.webp?_v=v3-380",
+          "localImageFile": "scene_1.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117472",
+          "order": 2,
+          "title": "Decomisaron más de 1.300 kilos de carne durante controles en comercios de Cipolletti",
+          "subtitle": "Los operativos se realizaron durante tres días y alcanzaron a más de 40 carnicerías y comercios. Detectaron alimentos vencidos, hongos y productos sin rotulado.",
+          "category": "ACTUALIDAD",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/18/117472-decomisaron-mas-de-1300-kilos-de-carne-durante-controles-en-comercios-de-cipolletti",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2025/06/anbariloche/images/02/09/18/2091834_79d1aa14bf05d25221f1904cfcc19df4de1e7f6da2c60b9bb6768ba10c8ebc28/lg.webp?_v=v3-380",
+          "localImageFile": "scene_2.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117523",
+          "order": 3,
+          "title": "Deportivo Roca venció a Regina y es el único líder de la Liga Confluencia",
+          "subtitle": "En el arranque de la 7º fecha del Clausura, el &#34;Naranja&#34; se impuso al &#34;Albo&#34; y es el nuevo puntero que Unión de Allen y La Amistad de Cipolletti no pudieron ganar.",
+          "category": "ACTUALIDAD",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/18/117523-deportivo-roca-vencio-a-regina-y-es-el-unico-lider-de-la-liga-confluencia",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/57/2775733_9a67d3dc901c3ca74cfbb4dbe1b52af62cb4bf73635733733a91c88d6a672c49/lg.webp?_v=v3-380",
+          "localImageFile": "scene_3.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_116669",
+          "order": 4,
+          "title": "Puerto Montt invita a descubrir otro lado de la ciudad con una semana de experiencias gratuitas",
+          "subtitle": "Del 21 al 27 de septiembre, la ciudad chilena celebrará la segunda Semana del Turismo con siete jornadas de actividades gratuitas. Monte Verde, la Ruta del Salmón, gastronomía, bosque patagónico, recorridos históricos, navegación y cultura forman parte de una propuesta que busca consolidar a Puerto Montt como destino y puerta de entrada a la Patagonia.",
+          "category": "INFRAESTRUCTURA",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/09/116669-puerto-montt-invita-a-descubrir-otro-lado-de-la-ciudad-con-una-semana-de-experiencias-gratuitas",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/76/34/2763454_e40ff399b377fb6dff7ac2570db60e310198cb1dbe070fa3dae66a0d252ff110/lg.webp?_v=v3-380",
+          "localImageFile": "scene_4.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117520",
+          "order": 5,
+          "title": "Detuvieron a un hombre tras un asalto armado y un amplio despliegue policial",
+          "subtitle": "Un sujeto fue arrestado luego de ingresar a una vivienda en calle España, amenazar con un cuchillo a una niña de nueve años y sustraer pertenencias, en un hecho que movilizó a diversas unidades policiales por la zona rural.",
+          "category": "POLICIALES",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/18/117520-detuvieron-a-un-hombre-tras-un-asalto-armado-y-un-amplio-despliegue-policial",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/57/2775725_f2056c64d055e05bfaccd71b6ddab8d7297fbe6be1631f492c1783ce8db54a6e/lg.webp?_v=v3-380",
+          "localImageFile": "scene_5.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        }
+      ],
+      "status": "completed",
+      "videoOutputs": {
+        "vertical": "C:\\Users\\manua\\OneDrive\\Documents\\Repos\\vidioteip\\out\\batches\\batch_20260918160926_anbariloche\\bariloche-summary-vertical.mp4"
+      }
+    },
+    "batch_20260918161121_anbariloche": {
+      "id": "batch_20260918161121_anbariloche",
+      "source": "ANBARILOCHE.COM.AR",
+      "createdAt": "2026-09-18T16:11:21.435Z",
+      "articleIds": [
+        "anbariloche_117511",
+        "anbariloche_117469",
+        "anbariloche_117466",
+        "anbariloche_117463",
+        "anbariloche_117460"
+      ],
+      "items": [
+        {
+          "id": "anbariloche_117511",
+          "order": 1,
+          "title": "Ferias, gastronomía e investigación: todo listo para el encuentro abierto de la UNCo en El Galpón",
+          "subtitle": "El Centro de Estudiantes de la Universidad del Comahue realizará un encuentro multidisciplinario este sábado 19 de septiembre, de 15:30 a 22:00 horas, en el espacio El Galpón de San Antonio Oeste.",
+          "category": "INFRAESTRUCTURA",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/18/117511-ferias-gastronomia-e-investigacion-todo-listo-para-el-encuentro-abierto-de-la-unco-en-el-galpon",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/56/2775669_22eba3095dcfe5ba206970762f8df3d54e477793df9bdde030226dcd3a262a4a/lg.webp?_v=v3-380",
+          "localImageFile": "scene_1.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117469",
+          "order": 2,
+          "title": "Viernes templado: cómo estará el tiempo y qué anticipa la AIC para el Alto Valle",
+          "subtitle": "La jornada tendrá cielo cubierto, temperaturas agradables y viento moderado. El cambio llegará durante el fin de semana, con ráfagas fuertes.",
+          "category": "INFRAESTRUCTURA",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/18/117469-viernes-templado-como-estara-el-tiempo-y-que-anticipa-la-aic-para-el-alto-valle",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/76/54/2765410_5e3d1699ec4872ebf9137fd077f9b5368bcf12d1a11564975f1e62b898ef0a0d/lg.webp?_v=v3-380",
+          "localImageFile": "scene_2.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117466",
+          "order": 3,
+          "title": "En Salta, el &#34;Albinegro&#34; va por los cuartos de final del Federal A",
+          "subtitle": "En la noche del viernes, Cipolleti irá por el triunfo ante Juventud Antoniana que lo meta entre los mejores ocho y lo acerque a la pelea por el primer ascenso a la B Nacional.",
+          "category": "ACTUALIDAD",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/17/117466-en-salta-el-albinegro-va-por-los-cuartos-de-final-del-federal-a",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/53/2775373_51b64eb655ce73e2f6d5ea0250bc923333d8be82336630083367ce308852cf64/lg.webp?_v=v3-380",
+          "localImageFile": "scene_3.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117463",
+          "order": 4,
+          "title": "Reconocieron a la Asociación Paleontológica Bariloche por su trabajo en la preservación del patrimonio rionegrino",
+          "subtitle": "La distinción fue entregada este jueves por la Dirección de Patrimonio y Museos de Río Negro. El reconocimiento destaca la trayectoria de la entidad y su aporte al estudio, rescate, investigación y difusión del patrimonio paleontológico de la provincia.",
+          "category": "ACTUALIDAD",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/17/117463-reconocieron-a-la-asociacion-paleontologica-bariloche-por-su-trabajo-en-la-preservacion-del-patrimonio-rionegrino",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/53/2775354_b6a0e303bb9089cac1fc5fce1da3f5c012d50fbd2f96cce73d4035f996ab0fe3/lg.webp?_v=v3-380",
+          "localImageFile": "scene_4.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117460",
+          "order": 5,
+          "title": "Llegaron los materiales y Nadia ya tiene fecha para su cirugía",
+          "subtitle": "La joven paciente oncológica había reclamado públicamente la entrega de un insumo indispensable para poder ser intervenida. Tras la difusión de su situación y las gestiones realizadas, confirmó que los materiales finalmente llegaron y que ya cuenta con una fecha para la operación.",
+          "category": "ACTUALIDAD",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/17/117460-llegaron-los-materiales-y-nadia-ya-tiene-fecha-para-su-cirugia",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/53/2775327_a11aef7cf04a3981a29ff58febb46c7d37931a856fc72266e64211701199dc7d/lg.webp?_v=v3-380",
+          "localImageFile": "scene_5.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        }
+      ],
+      "status": "completed",
+      "videoOutputs": {
+        "vertical": "C:\\Users\\manua\\OneDrive\\Documents\\Repos\\vidioteip\\out\\batches\\batch_20260918161121_anbariloche\\bariloche-summary-vertical.mp4"
+      }
+    },
+    "batch_20260918161312_anbariloche": {
+      "id": "batch_20260918161312_anbariloche",
+      "source": "ANBARILOCHE.COM.AR",
+      "createdAt": "2026-09-18T16:13:12.622Z",
+      "articleIds": [
+        "anbariloche_117439",
+        "anbariloche_117457",
+        "anbariloche_117199",
+        "anbariloche_117211",
+        "anbariloche_117412"
+      ],
+      "items": [
+        {
+          "id": "anbariloche_117439",
+          "order": 1,
+          "title": "El narcotráfico se combate en toda la provincia: armas y droga secuestradas en Zapala",
+          "subtitle": "Un procedimiento permitió secuestrar cocaína, marihuana, armas de fuego y municiones, en una investigación por amenazas agravadas y lesiones.",
+          "category": "POLICIALES",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/17/117439-el-narcotrafico-se-combate-en-toda-la-provincia-armas-y-droga-secuestradas-en-zapala",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/49/2774906_33b26007624994c89e2703bc86c6d894a46841e0bd51fb5c88bd4abe75e07ec7/lg.webp?_v=v3-380",
+          "localImageFile": "scene_1.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117457",
+          "order": 2,
+          "title": "La CEB incorporó dos utilitarios eléctricos y sumará otros dos a su flota",
+          "subtitle": "Los nuevos vehículos serán destinados principalmente a tareas urbanas y forman parte del plan de renovación y modernización de la Cooperativa. Tienen una autonomía de hasta 245 kilómetros por carga y capacidad para transportar hasta una tonelada.",
+          "category": "CULTURA",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/17/117457-la-ceb-incorporo-dos-utilitarios-electricos-y-sumara-otros-dos-a-su-flota",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/52/2775256_559dfd4aef77913bf38c77a001be25ab21a38ed2ee0c2c081c31286d29db2acc/lg.webp?_v=v3-380",
+          "localImageFile": "scene_2.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117199",
+          "order": 3,
+          "title": "Comenzaron los talleres territoriales para impulsar la participación ciudadana para la reforma de la Carta Orgánica",
+          "subtitle": "Vecinos y organizaciones comunitarias contarán con un ciclo de encuentros para debatir y presentar propuestas antes de la elección de los convencionales constituyentes del próximo 1 de noviembre.",
+          "category": "ACTUALIDAD",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/15/117199-comenzaron-los-talleres-territoriales-para-impulsar-la-participacion-ciudadana-para-la-reforma-de-la-carta-organica",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/11/2771139_667ff2b0c4cb01690adf97c05628ddbd4564e13a85364d6743e38059a8544f34/lg.webp?_v=v3-380",
+          "localImageFile": "scene_3.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117211",
+          "order": 4,
+          "title": "Uthgra propone limitar la inteligencia artificial en la Carta Orgánica para proteger el empleo humano",
+          "subtitle": "El gremio gastronómico y hotelero solicitó resguardar por vía constitucional local los puestos de trabajo frente al avance de la automatización y la robótica en la principal actividad económica de Bariloche.",
+          "category": "INFRAESTRUCTURA",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/15/117211-uthgra-propone-limitar-la-inteligencia-artificial-en-la-carta-organica-para-proteger-el-empleo-humano",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/13/2771322_34311a1ccaa57d5321ee1ec2beef8bebd39e083be3c4b3073a3e6b25ac210c2d/lg.webp?_v=v3-380",
+          "localImageFile": "scene_4.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        },
+        {
+          "id": "anbariloche_117412",
+          "order": 5,
+          "title": "Proponen que los partidos políticos donen la mitad de sus fondos de campaña a instituciones locales",
+          "subtitle": "En el marco de la elección de convencionales para la reforma de la Carta Orgánica municipal, el Partido Participación Vecinal plantea destinar el 50% de los aportes electorales a entidades de bien público e incluir esta obligación por norma.",
+          "category": "ACTUALIDAD",
+          "sourceUrl": "https://www.anbariloche.com.ar/noticias/2026/09/17/117412-proponen-que-los-partidos-politicos-donen-la-mitad-de-sus-fondos-de-campana-a-instituciones-locales",
+          "imageUrl": "https://anbariloche-s3.cdn.net.ar/s3i233/2026/09/anbariloche/images/02/77/46/2774667_65a116faae41de9579bb2551afd09095cb808de40d0152728640f0ec8c386303/lg.webp?_v=v3-380",
+          "localImageFile": "scene_5.webp",
+          "source": "ANBARILOCHE.COM.AR"
+        }
+      ],
+      "status": "completed",
+      "videoOutputs": {
+        "vertical": "C:\\Users\\manua\\OneDrive\\Documents\\Repos\\vidioteip\\out\\batches\\batch_20260918161312_anbariloche\\bariloche-summary-vertical.mp4"
       }
     }
   }

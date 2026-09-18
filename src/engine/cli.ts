@@ -7,9 +7,18 @@ async function main() {
   const command = args[0] || 'status';
 
   let quota = 5;
+  let batchesCount = 1;
+  let formats: ('vertical' | 'horizontal')[] = ['vertical', 'horizontal'];
+
   for (const arg of args) {
     if (arg.startsWith('--quota=')) {
       quota = parseInt(arg.split('=')[1], 10) || 5;
+    } else if (arg.startsWith('--batches=')) {
+      batchesCount = parseInt(arg.split('=')[1], 10) || 1;
+    } else if (arg === '--vertical-only' || arg === '--vertical') {
+      formats = ['vertical'];
+    } else if (arg.startsWith('--formats=')) {
+      formats = arg.split('=')[1].split(',') as any;
     }
   }
 
@@ -54,11 +63,20 @@ async function main() {
     }
 
     case 'produce': {
-      console.log(`🎬 [CLI] Triggering production (Quota: ${quota})...`);
-      const res = await engine.produce({ quota });
-      console.log(`\nResult:`, res.message);
-      if (res.manifest) {
-        console.log(`Manifest:`, res.manifest.videos);
+      console.log(`🎬 [CLI] Triggering production (${batchesCount} batch(es), Quota: ${quota}, Formats: ${formats.join(', ')})...`);
+      for (let b = 0; b < batchesCount; b++) {
+        console.log(`\n========================================`);
+        console.log(`🎬 Processing Batch ${b + 1} of ${batchesCount}...`);
+        console.log(`========================================`);
+        const res = await engine.produce({ quota, formats });
+        console.log(`\nResult:`, res.message);
+        if (res.status !== 'produced') {
+          console.warn(`Stopping: ${res.message}`);
+          break;
+        }
+        if (res.manifest) {
+          console.log(`Manifest:`, res.manifest.videos);
+        }
       }
       break;
     }
