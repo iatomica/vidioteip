@@ -26,6 +26,10 @@ export function HeadlineScene(props: HeadlineSceneProps) {
 
   if (!content) return null;
 
+  const templateId = content.templateId || "design-1-black";
+  const isLight = content.themeMode === "light" || templateId.includes("white");
+  const headlineColor = isLight ? "#000000" : "#FFFFFF";
+
   const headlineSize = isVertical ? 76 : 68;
   const subheadlineSize = isVertical ? 38 : 32;
 
@@ -36,11 +40,11 @@ export function HeadlineScene(props: HeadlineSceneProps) {
         width: "100%",
         height: "100%",
         overflow: "hidden",
-        backgroundColor: theme.background,
+        backgroundColor: isLight ? "#F8FAFC" : theme.background,
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        paddingTop: isVertical ? 290 : 54,
+        paddingTop: isVertical ? 135 : 54,
         paddingBottom: isVertical ? 110 : 54,
         paddingLeft: isVertical ? 48 : 48,
         paddingRight: isVertical ? 48 : 48,
@@ -56,7 +60,9 @@ export function HeadlineScene(props: HeadlineSceneProps) {
           overlay={true}
           overlayGradient={
             isVertical
-              ? `linear-gradient(180deg, rgba(11,13,18,0.2) 0%, rgba(11,13,18,0.05) 30%, rgba(11,13,18,0.3) 60%, ${theme.background}E6 92%)`
+              ? isLight
+                ? "linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 30%, rgba(255,255,255,0.2) 60%, rgba(248,250,252,0.85) 92%)"
+                : `linear-gradient(180deg, rgba(11,13,18,0.2) 0%, rgba(11,13,18,0.05) 30%, rgba(11,13,18,0.3) 60%, ${theme.background}E6 92%)`
               : `linear-gradient(180deg, rgba(11,13,18,0.5) 0%, rgba(11,13,18,0.15) 30%, rgba(11,13,18,0.7) 55%, ${theme.background}FB 88%, ${theme.background} 100%)`
           }
         />
@@ -67,10 +73,10 @@ export function HeadlineScene(props: HeadlineSceneProps) {
         </>
       )}
 
-      {/* Stories Vertical Template (in front of video/photo background, behind texts and logo) */}
+      {/* Reel Vertical Template (in front of video/photo background, behind texts) */}
       {isVertical && (
         <Img
-          src={resolveAsset("assets/stories-template.png")}
+          src={resolveAsset(`assets/templates/reels/${templateId}.webp`)}
           style={{
             position: "absolute",
             inset: 0,
@@ -86,58 +92,51 @@ export function HeadlineScene(props: HeadlineSceneProps) {
       {/* Editorial Frame Overlays - only when not vertical */}
       {!isVertical && <BrutalistFrame theme={theme} />}
 
-      {/* Top Bar: Single enlarged tag next to fixed logo */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          zIndex: 20,
-          width: "100%",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", marginLeft: isVertical ? 256 : 184 }}>
-          <TapeLabel
-            text={content.kicker ?? "ACTUALIDAD"}
-            theme={theme}
-            angle={0}
-            fontSize={isVertical ? 32 : 20}
-          />
-        </div>
-      </div>
-
-      {/* Center Core: Kinetic Highlighted Headline + Subheadline (positioned in lower half) */}
+      {/* Center Core: Category Tag + Kinetic Highlighted Headline + Subheadline */}
       <div
         style={{
           zIndex: 10,
           display: "flex",
           flexDirection: "column",
-          gap: isVertical ? 24 : 18,
+          gap: isVertical ? 22 : 16,
           maxWidth: isVertical ? "100%" : "78%",
-          margin: isVertical ? "auto 0 40px 0" : "auto 0 20px 0",
+          margin: isVertical ? "auto 0 50px 0" : "auto 0 20px 0",
         }}
       >
+        {/* Category Pill directly above the title */}
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <TapeLabel
+            text={content.kicker ?? "ACTUALIDAD"}
+            theme={theme}
+            angle={0}
+            fontSize={isVertical ? 28 : 18}
+          />
+        </div>
+
         <HighlightedHeadline
           text={content.title}
           theme={theme}
           fontSize={headlineSize}
+          color={headlineColor}
           delay={5}
         />
 
         {content.subtitle && (
           <div
             style={{
-              borderLeft: `5px solid ${theme.accent}`,
-              backgroundColor: "rgba(11, 13, 18, 0.75)",
+              borderLeft: "5px solid #dc2626",
+              backgroundColor: isLight ? "rgba(255, 255, 255, 0.96)" : "rgba(11, 13, 18, 0.85)",
               backdropFilter: "blur(14px)",
               padding: isVertical ? "18px 24px" : "14px 22px",
               borderRadius: "0 10px 10px 0",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.7)",
+              boxShadow: isLight ? "0 10px 30px rgba(0,0,0,0.18)" : "0 10px 30px rgba(0,0,0,0.65)",
             }}
           >
             <Subheadline
               text={content.subtitle}
               theme={theme}
               fontSize={subheadlineSize}
+              color={isLight ? "#000000" : "#FFFFFF"}
               delay={14}
             />
           </div>

@@ -7,6 +7,8 @@ export interface BatchPropsOptions {
   audioSrc?: string;
   audioVolume?: number;
   format?: 'vertical' | 'horizontal';
+  templateId?: string;
+  themeMode?: 'dark' | 'light';
 }
 
 export class BatchManager {
@@ -16,6 +18,8 @@ export class BatchManager {
   public createVideoProps(batch: BatchRecord, options: BatchPropsOptions = {}): NewsVideoProps {
     const format = options.format || 'vertical';
     const monthYear = new Date().toLocaleDateString('es-AR', { month: 'long', year: 'numeric' }).toUpperCase();
+    const templateId = options.templateId || 'design-1-black';
+    const themeMode = options.themeMode || (templateId.includes('white') ? 'light' : 'dark');
 
     const scenes: Scene[] = batch.items.map((item) => ({
       id: `${batch.id}-scene-${item.order}`,
@@ -29,6 +33,8 @@ export class BatchManager {
         badgeText: item.category,
         source: item.source || 'ANBariloche',
         backgroundImage: `images/batches/${batch.id}/${item.localImageFile}`,
+        templateId,
+        themeMode,
       },
     }));
 

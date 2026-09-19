@@ -43,6 +43,8 @@ export const HeadlineSceneSchema = z.object({
     date: z.string().optional(),
     backgroundImage: z.string().optional(),
     tickerItems: z.array(z.string()).optional(),
+    templateId: z.string().optional(),
+    themeMode: z.enum(["dark", "light"]).optional(),
   }),
 });
 

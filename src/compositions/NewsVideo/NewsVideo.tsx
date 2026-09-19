@@ -54,13 +54,13 @@ export const NewsVideo: React.FC<NewsVideoProps> = ({
         />
       )}
 
-      {/* Persistent Fixed Brand Logo across news stories (fades out at outro) */}
-      {fixedLogoOpacity > 0.005 && (
+      {/* Persistent Fixed Brand Logo across news stories (only when not vertical, as vertical templates already have the logo baked in) */}
+      {!isVertical && fixedLogoOpacity > 0.005 && (
         <div
           style={{
             position: 'absolute',
-            top: isVertical ? 290 : 54,
-            left: isVertical ? 48 : 36,
+            top: 54,
+            left: 36,
             zIndex: 40,
             opacity: fixedLogoOpacity,
             pointerEvents: 'none',

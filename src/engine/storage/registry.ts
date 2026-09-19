@@ -96,11 +96,19 @@ export class RegistryStore {
   }
 
   /**
-   * Get all pending articles sorted by discovery time (oldest first or newest first)
+   * Get all pending articles discovered within the last 48 hours, sorted by time
    */
   public getPendingArticles(portalId?: string): RegistryEntry[] {
+    const FORTY_EIGHT_HOURS_MS = 48 * 60 * 60 * 1000;
+    const cutoff = Date.now() - FORTY_EIGHT_HOURS_MS;
+
     return Object.values(this.data.articles)
-      .filter((a) => a.status === 'pending' && (!portalId || a.portalId === portalId))
+      .filter((a) => {
+        if (a.status !== 'pending') return false;
+        if (portalId && a.portalId !== portalId) return false;
+        const time = new Date(a.discoveredAt).getTime();
+        return isNaN(time) || time >= cutoff;
+      })
       .sort((a, b) => new Date(a.discoveredAt).getTime() - new Date(b.discoveredAt).getTime());
   }
 

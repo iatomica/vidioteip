@@ -22,6 +22,8 @@ export interface PipelineOptions {
   audioVolume?: number;
   formats?: ('vertical' | 'horizontal')[];
   forceProduce?: boolean;
+  templateId?: string;
+  themeMode?: 'dark' | 'light';
 }
 
 export class NewsVideoEngine {
@@ -156,6 +158,8 @@ export class NewsVideoEngine {
       const videoProps = this.batchManager.createVideoProps(batch, {
         audioSrc,
         audioVolume,
+        templateId: options.templateId,
+        themeMode: options.themeMode,
       });
       const propsFile = this.batchManager.saveBatchProps(batch, videoProps);
 

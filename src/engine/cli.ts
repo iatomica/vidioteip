@@ -9,6 +9,7 @@ async function main() {
   let quota = 5;
   let batchesCount = 1;
   let formats: ('vertical' | 'horizontal')[] = ['vertical', 'horizontal'];
+  let templateId: string | undefined = undefined;
 
   for (const arg of args) {
     if (arg.startsWith('--quota=')) {
@@ -19,6 +20,8 @@ async function main() {
       formats = ['vertical'];
     } else if (arg.startsWith('--formats=')) {
       formats = arg.split('=')[1].split(',') as any;
+    } else if (arg.startsWith('--template=')) {
+      templateId = arg.split('=')[1].trim();
     }
   }
 
@@ -68,7 +71,7 @@ async function main() {
         console.log(`\n========================================`);
         console.log(`🎬 Processing Batch ${b + 1} of ${batchesCount}...`);
         console.log(`========================================`);
-        const res = await engine.produce({ quota, formats });
+        const res = await engine.produce({ quota, formats, templateId });
         console.log(`\nResult:`, res.message);
         if (res.status !== 'produced') {
           console.warn(`Stopping: ${res.message}`);
@@ -83,7 +86,7 @@ async function main() {
 
     case 'run': {
       console.log(`🚀 [CLI] Running end-to-end pipeline (Scrape -> Check Quota -> Produce)...`);
-      const res = await engine.run({ quota });
+      const res = await engine.run({ quota, templateId });
       console.log('\n🏁 Pipeline finished.');
       console.log('Scrape:', res.scrape);
       console.log('Production:', res.production.message);

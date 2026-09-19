@@ -11,6 +11,7 @@ export interface HighlightedHeadlineProps {
   highlightWords?: string[];
   className?: string;
   style?: React.CSSProperties;
+  color?: string;
 }
 
 export function HighlightedHeadline({
@@ -20,6 +21,7 @@ export function HighlightedHeadline({
   delay = 4,
   className = "",
   style = {},
+  color,
 }: HighlightedHeadlineProps) {
   const frame = useCurrentFrame();
   const theme = typeof themeProp === "string" ? getTheme(themeProp) : (themeProp ?? getTheme());
@@ -33,7 +35,7 @@ export function HighlightedHeadline({
         fontFamily: theme.headlineFont,
         fontSize,
         fontWeight: isVox ? 900 : 800,
-        color: theme.foreground,
+        color: color || theme.foreground,
         display: "flex",
         flexWrap: "wrap",
         gap: "0.22em 0.28em",
@@ -50,6 +52,9 @@ export function HighlightedHeadline({
 
         const cleanText = word.replace(/\*/g, "");
 
+        const normalColor = color || (theme.name === "editorial-calm" ? "#000000" : "#FFFFFF");
+        const isLight = normalColor === "#000000" || normalColor.toLowerCase().includes("000");
+
         return (
           <span
             key={idx}
@@ -59,9 +64,11 @@ export function HighlightedHeadline({
               opacity,
               transform: `translate3d(0, ${translateY}px, 0)`,
               whiteSpace: "nowrap",
-              color: isLastTwo ? theme.accent : "#FFFFFF",
+              color: isLastTwo ? theme.accent : normalColor,
               textShadow: isLastTwo
-                ? "0 2px 20px rgba(214, 27, 31, 0.45), 0 2px 12px rgba(0, 0, 0, 0.9)"
+                ? "0 2px 16px rgba(220, 38, 38, 0.45)"
+                : isLight
+                ? "0 1px 2px rgba(255, 255, 255, 0.8)"
                 : "0 2px 25px rgba(0, 0, 0, 0.95)",
             }}
           >
